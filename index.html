@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>exam</title>
+</head>
+<body>
+  <div id="container">
+    <div id="cont-sides">
+      <div id="left-side">
+        <img id="image" alt="">
+        <p id="country"></p>
+        <input placeholder="Введите город" id="input-city" type="text">
+        <button id="btn">find city</button>
+        <button id="btn-geo">track geolocation</button>
+      </div>
+      <div id="right-side">
+        <div id="city"></div>
+        <div id="weather-container">
+          <span id="weather"></span>
+          <div id="temperature"></div>
+          <div id="content">
+            <div id="wind-container">
+              <img class="windImg" src="wind.png" alt="">
+              <div id="wind-speed"></div>
+            </div>
+              <div id="humidity-container">
+                <img class="humidityImg" src="humidity.png" alt="">
+                <div id="humidity"></div>
+              </div>
+          </div>
+        </div>
+        <div id="location-container">
+          <div class="latitude"></div>
+          <div class="longitude"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
