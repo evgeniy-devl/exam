@@ -13,14 +13,31 @@ body{
     align-items: center;
     height: 100vh;
     width: 100%;
+    flex-direction: column;
 }
-
 #cont-sides{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 65%;
     height: 70vh;
+}
+#weather-days{
+    display: none;
+    margin-top: 20px;
+    width: 64%;
+    gap: 20px;
+}
+.containers-weather{
+    width: 300px;
+    height: 200px;
+    border-radius: 12px;
+    border: 1px solid rgb(99, 255, 37);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #left-side, #right-side{
@@ -98,7 +115,7 @@ body{
     text-align: center;
 }
 #country.animate, #city.animate, 
-#image.animate, #weather-container.animate{
+#image.animate, #weather-container.animate, #weather-days.animate{
     animation: frames 2s;
 }
 #content{
@@ -163,6 +180,13 @@ body{
 }
 
 @media (max-width: 1075px) and (min-width: 580px){
+    #container{
+        margin-top: 160px;
+    }
+    #weather-days{
+        margin-top: 120px ;
+        margin-right: 80px;
+    }
     #cont-sides{
         flex-direction: column;
     }
