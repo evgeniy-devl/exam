@@ -40,11 +40,12 @@ button.addEventListener("click", ()=>{
                     image.src = ""
                     alert("Вы ничего не вводили")
                 }else if(data.error){
+                    alert("Такого города не существует")
                     city.innerHTML = ""
                     weatherCont.style.display = "none"
                     country.innerHTML = ""
-                    image.src = ""   
-                    alert("Такого города не существует")
+                    image.src = ""
+                    input.value = ""
                 }
                 city.innerHTML = data.location.name
                 localStorage.setItem("city", data.location.name)
@@ -132,8 +133,8 @@ buttonGeo.addEventListener("click", ()=>{
         let lon = position.coords.longitude
         document.getElementsByClassName("latitude")[0].innerHTML = "Latitude: " + lat
         document.getElementsByClassName("longitude")[0].innerHTML = "Longitude: " + lon
-        localStorage.setItem("latitude",document.getElementsByClassName("latitude")[0].innerHTML = "Latitude: " + lat)
-        localStorage.setItem("longitude",document.getElementsByClassName("longitude")[0].innerHTML = "Longitude: " + lon)
+        localStorage.setItem("latitude", "Latitude: " + lat)
+        localStorage.setItem("longitude", "Longitude: " + lon)
     }
     getPosition()
     
@@ -148,8 +149,8 @@ windImg.style.display = localStorage.getItem("wind")
 humidityImg.style.display = localStorage.getItem("humidity")
 wind.innerHTML = localStorage.getItem("windText")
 humidity.innerHTML = localStorage.getItem("humidityText")
-localStorage.getItem("latitude")
-localStorage.getItem("longitude")
+document.getElementsByClassName("latitude")[0].innerHTML = localStorage.getItem("latitude")
+document.getElementsByClassName("longitude")[0].innerHTML = localStorage.getItem("longitude")
 
 // async function getWeather(city){
 //     const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=8e8ee2813dcc4be3b69145705230312&q=${city}`)
